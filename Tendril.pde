@@ -29,4 +29,8 @@ class Tendril
       myY = endY;
     }
   }
+  public void setAngle(newAngle)
+  {
+    myAngle = newAngle;
+  }
 }
