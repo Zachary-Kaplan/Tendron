@@ -33,4 +33,8 @@ class Tendril
   {
     myAngle = newAngle;
   }
+  public double getAngle()
+  {
+    return myAngle;
+  }
 }
