@@ -28,6 +28,7 @@ class Tendril
       myX = endX;
       myY = endY;
     }
+    Cluster Arbuckle = new Cluster(len - 1, myX, myY);
   }
   public void setAngle(newAngle)
   {
