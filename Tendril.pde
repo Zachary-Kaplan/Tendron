@@ -22,15 +22,15 @@ class Tendril
     for(int i = 0; i < myNumSegments; i++)
     {
       myAngle += ( 0.4 * Math.random()) - 0.2;
-      int endX = myX + (SEG_LENGTH * cos(myAngle));
-      int endY = myY + (SEG_LENGTH * sin(myAngle));
+      int endX = myX + (int)(SEG_LENGTH * cos((float)myAngle));
+      int endY = myY + (int)(SEG_LENGTH * sin((float)myAngle));
       line(myX,myY,endX,endY);
       myX = endX;
       myY = endY;
     }
-    Cluster Arbuckle = new Cluster(len - 1, myX, myY);
+    Cluster Arbuckle = new Cluster(myNumSegments - 1, myX, myY);
   }
-  public void setAngle(newAngle)
+  public void setAngle(double newAngle)
   {
     myAngle = newAngle;
   }
