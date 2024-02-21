@@ -19,16 +19,19 @@ class Tendril
   }
   public void show()
   {
-    for(int i = 0; i < myNumSegments; i++)
+    for(int i = 0; i < myNumSegments / 10; i++)
     {
       myAngle += ( 0.4 * Math.random()) - 0.2;
-      int endX = myX + (int)(SEG_LENGTH * cos((float)myAngle));
-      int endY = myY + (int)(SEG_LENGTH * sin((float)myAngle));
+      int endX = myX + (int)(SEG_LENGTH * 2 * cos((float)myAngle));
+      int endY = myY + (int)(SEG_LENGTH * 2 * sin((float)myAngle));
       line(myX,myY,endX,endY);
       myX = endX;
       myY = endY;
     }
-    Cluster Arbuckle = new Cluster(myNumSegments - 1, myX, myY);
+    if(myNumSegments > 48)
+    {
+      Cluster Arbuckle = new Cluster(myNumSegments - 1, myX, myY);
+    }
   }
   public void setAngle(double newAngle)
   {
